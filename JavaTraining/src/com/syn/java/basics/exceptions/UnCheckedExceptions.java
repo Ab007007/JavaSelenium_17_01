@@ -4,14 +4,18 @@ public class UnCheckedExceptions
 {
 	public static void main(String[] args) 
 	{
-		System.out.println("--- main started ----");
-		String str ="abc";
-		System.out.println("Length : " + str.length());
 		try
 		{
+			System.out.println("--- main started ----");
+			String str = null;
+			System.out.println("Length : " + str.length());
 			System.out.println(str.charAt(str.length()));
 		}
 		catch(StringIndexOutOfBoundsException ex)
+		{
+			System.out.println(ex.getMessage());
+		}
+		catch(NullPointerException ex)
 		{
 			System.out.println(ex.getMessage());
 		}
