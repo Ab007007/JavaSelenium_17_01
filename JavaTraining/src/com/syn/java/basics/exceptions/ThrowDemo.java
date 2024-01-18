@@ -28,11 +28,12 @@ public class ThrowDemo
 			{
 				try
 				{
-					throw new Exception();
+					throw new BalanceInsufficientException();
 				}
-				catch(Exception ex)
+				catch(BalanceInsufficientException ex)
 				{
-					System.out.println("please withdraw less than " + balance);
+					System.out.println("[ catch ] please withdraw less than " + balance);
+					System.out.println("[ catch - getmessage ]" + ex.getMessage());
 				}
 			}
 			else

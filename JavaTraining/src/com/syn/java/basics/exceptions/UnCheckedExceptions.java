@@ -19,8 +19,10 @@ public class UnCheckedExceptions
 		{
 			System.out.println(ex.getMessage());
 		}
-		System.out.println("--- main ended ----");
-		
+		finally
+		{
+			System.out.println("[ FINALLY ]--- main ended ----");
+		}
 	}
 
 }
