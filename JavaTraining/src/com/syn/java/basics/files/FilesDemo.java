@@ -2,6 +2,8 @@ package com.syn.java.basics.files;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 
 public class FilesDemo
 {
@@ -33,7 +35,8 @@ public class FilesDemo
 		System.out.println("Writable : " + f.canWrite());
 		System.out.println("Readable : " + f.canRead());
 		System.out.println("Absolute Path " + f.getAbsolutePath());
-		System.out.println("last modified " + f.lastModified());
+		System.out.println("last modified " + new Date(f.lastModified()));
+		System.out.println("last modified " + new SimpleDateFormat("MMMM dd,yyyy hh:mm:ss").format((f.lastModified())));
 		System.out.println("------------------------------------------------");
 		
 	}
