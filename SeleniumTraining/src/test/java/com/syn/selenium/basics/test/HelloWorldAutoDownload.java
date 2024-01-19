@@ -14,6 +14,7 @@ public class HelloWorldAutoDownload {
 	{
 		try 
 		{
+			System.out.println("---- Killing the existing Processes ----");
 			Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe");
 		}
 		catch (IOException e) 
