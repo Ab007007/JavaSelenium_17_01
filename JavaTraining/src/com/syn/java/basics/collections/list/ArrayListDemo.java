@@ -12,11 +12,13 @@ public class ArrayListDemo
 	public static void main(String[] args) 
 	{
 		List al = new ArrayList();
+		List al1 = new ArrayList();
 		
 		al.add(25);
 		al.add(23.3);
 		al.add("abcd");
 		al.add(new Person());
+		al.add(al1);
 		
 		printCollectionUsingForloop(al);
 		
