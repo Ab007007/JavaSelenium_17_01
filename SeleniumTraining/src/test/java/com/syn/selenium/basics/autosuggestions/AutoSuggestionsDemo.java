@@ -1,5 +1,6 @@
 package com.syn.selenium.basics.autosuggestions;
 
+import java.util.Iterator;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -24,13 +25,25 @@ public class AutoSuggestionsDemo
 		Thread.sleep(5000);
 		List<WebElement> autoSuggestions = driver.findElements(By.xpath("//ul[@class='G43f7e']/li[@role='presentation']"));
 		
+	//	printElementsUsingForEach(autoSuggestions);
+		
+		Iterator<WebElement> it = autoSuggestions.iterator();
+		while(it.hasNext())
+		{
+			System.out.println(it.next().getText());
+		}
+		
+	}
+	
+	
+	
+	
+	private static void printElementsUsingForEach(List<WebElement> autoSuggestions) {
 		System.out.println("Total suggesitons " + autoSuggestions.size());
 		for (WebElement autoSuggestion : autoSuggestions) 
 		{
 			System.out.println(autoSuggestion.getText());
 		}
-		
-		
 	}
 
 }
