@@ -13,7 +13,7 @@ public class FormFill
 	{
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-	
+		int date = 14;
 		driver.get("http://formy-project.herokuapp.com/form");
 		Thread.sleep(5000);
 		driver.findElement(By.id("first-name")).sendKeys("Aravinda");
@@ -25,7 +25,11 @@ public class FormFill
 		driver.findElement(By.id("radio-button-3")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.id("checkbox-1")).click();
-		
+		Thread.sleep(2000);
+		driver.findElement(By.id("datepicker")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//table[@class='table-condensed']//td[text()='"+ date+"']")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.linkText("Submit")).click();
 		
 		Thread.sleep(5000);
