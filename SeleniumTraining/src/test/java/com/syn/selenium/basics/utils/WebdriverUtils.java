@@ -179,4 +179,10 @@ public class WebdriverUtils {
 		WebElement ele = getMyElement(type, value);
 		return ele.getText();
 	}
+	
+	public static String getTextOfMyElement(WebElement ele)
+	{
+		System.out.println("Getting Text :  on Element ");
+		return ele.getText();
+	}
 }
