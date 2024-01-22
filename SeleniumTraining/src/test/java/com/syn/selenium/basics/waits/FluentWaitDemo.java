@@ -61,7 +61,6 @@ public class FluentWaitDemo
 			
 		};
 		
-		
 		//STEP - 3
 		wait.until(fun);
 		
